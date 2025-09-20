@@ -12,62 +12,75 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={heroImage} 
             alt="Luxury KTV Interior" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
         
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Khám Phá KTV Tốt Nhất 
-            <span className="text-gradient-gold block">Tại TP.HCM</span>
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-4 animate-fade-up">
+          <div className="mb-6">
+            <Badge className="bg-gradient-luxury text-white border-0 text-sm px-4 py-2 font-medium shadow-luxury">
+              ✨ Trải Nghiệm Karaoke Đẳng Cấp
+            </Badge>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-luxury font-bold text-white mb-8 leading-tight">
+            Khám Phá KTV 
+            <span className="text-gradient-luxury block mt-2">Tốt Nhất Sài Gòn</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Hướng dẫn toàn diện về các địa điểm karaoke cao cấp và bình dân tại Sài Gòn. 
-            Thông tin chính xác, đánh giá trung thực từ cộng đồng.
+          
+          <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto font-elegant leading-relaxed">
+            Hướng dẫn toàn diện về các địa điểm karaoke sang trọng và chất lượng cao tại TP.HCM. 
+            Thông tin chính xác, đánh giá chân thực từ cộng đồng.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link to="/ktv-list">
-              <Button size="lg" className="gap-2 shadow-gold">
+              <Button size="lg" variant="luxury" className="gap-3 text-lg px-8 py-4 animate-pulse-luxury">
                 <Search className="w-5 h-5" />
-                Tìm KTV Ngay
+                Khám Phá Ngay
               </Button>
             </Link>
             <Link to="/articles">
-              <Button variant="outline" size="lg" className="gap-2 bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
+              <Button variant="premium" size="lg" className="gap-3 text-lg px-8 py-4 glass-effect">
                 <Music className="w-5 h-5" />
-                Xem Bài Viết
+                Đọc Bài Viết
               </Button>
             </Link>
           </div>
         </div>
+
+        {/* Floating elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-luxury-gold/20 rounded-full blur-xl animate-float"></div>
+        <div className="absolute bottom-32 right-16 w-32 h-32 bg-luxury-rose/20 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-luxury-purple/20 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-ktv-surface">
+      <section className="py-20 bg-gradient-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">Địa Điểm KTV</div>
+            <div className="text-center group hover-lift">
+              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">50+</div>
+              <div className="text-muted-foreground font-elegant">Địa Điểm KTV</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1000+</div>
-              <div className="text-muted-foreground">Đánh Giá</div>
+            <div className="text-center group hover-lift">
+              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">1000+</div>
+              <div className="text-muted-foreground font-elegant">Đánh Giá</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">9</div>
-              <div className="text-muted-foreground">Quận Huyện</div>
+            <div className="text-center group hover-lift">
+              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">9</div>
+              <div className="text-muted-foreground font-elegant">Quận Huyện</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-muted-foreground">Hỗ Trợ</div>
+            <div className="text-center group hover-lift">
+              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">24/7</div>
+              <div className="text-muted-foreground font-elegant">Hỗ Trợ</div>
             </div>
           </div>
         </div>
@@ -76,11 +89,11 @@ const HomePage = () => {
       {/* Featured KTVs */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              KTV <span className="text-gradient-gold">Nổi Bật</span>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-luxury font-bold mb-6">
+              KTV <span className="text-gradient-luxury">Nổi Bật</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-elegant leading-relaxed">
               Những địa điểm karaoke được đánh giá cao nhất và được yêu thích bởi cộng đồng tại TP.HCM
             </p>
           </div>

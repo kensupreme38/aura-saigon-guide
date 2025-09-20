@@ -1,71 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* KTV Aura Design System - Dark theme with gold accents */
+/* Luxury KTV Aura Design System - Premium Dark Theme */
 
 @layer base {
   :root {
-    /* Dark theme base colors */
-    --background: 220 13% 8%;
-    --foreground: 0 0% 95%;
+    /* Luxury Dark Base Colors */
+    --background: 240 10% 6%;
+    --foreground: 0 0% 96%;
 
-    /* Card and surface colors */
-    --card: 220 13% 10%;
-    --card-foreground: 0 0% 95%;
+    /* Premium Surface Colors */
+    --card: 240 8% 8%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 220 13% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 240 8% 10%;
+    --popover-foreground: 0 0% 96%;
 
-    /* Brand colors */
-    --primary: 45 100% 60%;  /* Gold accent */
-    --primary-foreground: 220 13% 8%;
+    /* Luxury Brand Colors */
+    --primary: 43 96% 65%;  /* Champagne Gold */
+    --primary-foreground: 240 10% 6%;
 
-    --secondary: 220 13% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 250 8% 14%;
+    --secondary-foreground: 0 0% 94%;
 
-    /* Muted colors */
-    --muted: 220 13% 12%;
-    --muted-foreground: 0 0% 65%;
+    /* Sophisticated Muted Colors */
+    --muted: 240 6% 12%;
+    --muted-foreground: 240 4% 64%;
 
-    /* Accent colors */
-    --accent: 0 84% 58%;  /* Red accent */
-    --accent-foreground: 0 0% 95%;
+    /* Luxury Accent Colors */
+    --accent: 340 75% 55%;  /* Rose Gold */
+    --accent-foreground: 0 0% 96%;
 
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 96%;
 
-    /* Border and input */
-    --border: 220 13% 20%;
-    --input: 220 13% 15%;
-    --ring: 45 100% 60%;
+    /* Premium UI Elements */
+    --border: 240 6% 18%;
+    --input: 240 6% 16%;
+    --ring: 43 96% 65%;
 
-    --radius: 8px;
+    --radius: 12px;
 
-    /* Custom KTV theme colors */
-    --ktv-gold: 45 100% 60%;
-    --ktv-gold-dark: 45 100% 50%;
-    --ktv-red: 0 84% 58%;
-    --ktv-dark: 220 13% 8%;
-    --ktv-darker: 220 13% 6%;
-    --ktv-surface: 220 13% 12%;
-    --ktv-surface-light: 220 13% 15%;
+    /* Luxury KTV Theme Palette */
+    --luxury-gold: 43 96% 65%;
+    --luxury-gold-light: 43 96% 75%;
+    --luxury-gold-dark: 43 86% 55%;
+    --luxury-rose: 340 75% 55%;
+    --luxury-purple: 270 75% 60%;
+    --luxury-dark: 240 10% 6%;
+    --luxury-darker: 240 12% 4%;
+    --luxury-surface: 240 8% 10%;
+    --luxury-surface-light: 240 6% 16%;
+    --luxury-surface-hover: 240 6% 20%;
     
-    /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(45 100% 60%), hsl(45 100% 70%));
-    --gradient-dark: linear-gradient(135deg, hsl(220 13% 10%), hsl(220 13% 8%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 13% 8%) 0%, hsl(220 13% 12%) 100%);
+    /* Premium Gradients */
+    --gradient-luxury: linear-gradient(135deg, hsl(43 96% 65%) 0%, hsl(340 75% 55%) 50%, hsl(270 75% 60%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 96% 65%) 0%, hsl(43 96% 75%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(240 8% 8%) 0%, hsl(240 10% 12%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 6%) 0%, hsl(240 8% 10%) 50%, hsl(240 6% 14%) 100%);
+    --gradient-surface: linear-gradient(135deg, hsl(240 8% 10%) 0%, hsl(240 6% 12%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(240 8% 8%) 0%, hsl(240 6% 10%) 100%);
+    --gradient-border: linear-gradient(135deg, hsl(43 96% 65% / 0.3) 0%, hsl(340 75% 55% / 0.3) 100%);
     
-    /* Shadows */
-    --shadow-gold: 0 10px 30px -10px hsl(45 100% 60% / 0.3);
-    --shadow-elegant: 0 20px 40px -10px hsl(220 13% 4% / 0.5);
+    /* Luxury Shadows & Effects */
+    --shadow-luxury: 0 25px 50px -12px hsl(43 96% 65% / 0.25), 0 0 0 1px hsl(43 96% 65% / 0.1);
+    --shadow-elegant: 0 20px 40px -8px hsl(240 10% 2% / 0.8), 0 8px 16px -4px hsl(240 10% 4% / 0.4);
+    --shadow-premium: 0 32px 64px -12px hsl(240 10% 2% / 0.6), 0 0 0 1px hsl(240 6% 18% / 0.8);
+    --shadow-glow: 0 0 32px hsl(43 96% 65% / 0.4);
+    --shadow-rose-glow: 0 0 24px hsl(340 75% 55% / 0.3);
     
-    /* Animations */
+    /* Smooth Animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --radius: 8px;
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -85,13 +93,28 @@
   }
 }
 
-/* Custom component styles */
+/* Luxury Component Styles */
 @layer components {
+  /* Gradient Text Effects */
+  .text-gradient-luxury {
+    background: var(--gradient-luxury);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+  }
+  
   .text-gradient-gold {
     background: var(--gradient-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-weight: 600;
+  }
+  
+  /* Premium Background Gradients */
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
   }
   
   .bg-gradient-hero {
@@ -102,16 +125,95 @@
     background: var(--gradient-gold);
   }
   
-  .shadow-gold {
-    box-shadow: var(--shadow-gold);
+  .bg-gradient-surface {
+    background: var(--gradient-surface);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  /* Luxury Shadow Effects */
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
   }
   
   .shadow-elegant {
     box-shadow: var(--shadow-elegant);
   }
   
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-rose-glow {
+    box-shadow: var(--shadow-rose-glow);
+  }
+  
+  /* Premium Transitions */
+  .transition-luxury {
+    transition: var(--transition-luxury);
+  }
+  
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  /* Luxury Border Effects */
+  .border-gradient {
+    border: 1px solid transparent;
+    background: linear-gradient(var(--luxury-surface), var(--luxury-surface)) padding-box,
+                var(--gradient-border) border-box;
+  }
+  
+  /* Premium Glass Effect */
+  .glass-effect {
+    background: hsl(var(--luxury-surface) / 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.3);
+  }
+  
+  /* Hover Effects */
+  .hover-lift {
+    transition: var(--transition-luxury);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .hover-scale {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Typography Enhancements */
+  .text-luxury {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  
+  .text-elegant {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 }
 

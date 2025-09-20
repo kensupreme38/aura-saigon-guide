@@ -31,56 +31,75 @@ const KTVCard = ({ ktv, showActions = true }: KTVCardProps) => {
   };
 
   return (
-    <Card className="group hover:shadow-elegant transition-smooth overflow-hidden">
+    <Card className="group hover-lift bg-gradient-card border-gradient overflow-hidden">
       <div className="aspect-video relative overflow-hidden">
         <img 
           src={ktv.image} 
           alt={ktv.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
+          className="w-full h-full object-cover group-hover:scale-110 transition-luxury"
         />
-        <div className="absolute top-3 left-3">
-          <Badge variant={getTypeVariant(ktv.type)}>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        
+        <div className="absolute top-4 left-4">
+          <Badge 
+            variant={getTypeVariant(ktv.type)}
+            className="bg-luxury-surface/90 backdrop-blur-sm border-gradient text-luxury-gold font-medium"
+          >
             {getTypeLabel(ktv.type)}
           </Badge>
         </div>
-        <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center gap-1">
-          <Star className="w-3 h-3 text-primary fill-current" />
-          <span className="text-xs font-medium text-white">{ktv.rating}</span>
+        
+        <div className="absolute top-4 right-4 glass-effect rounded-lg px-3 py-2 flex items-center gap-2">
+          <Star className="w-4 h-4 text-luxury-gold fill-current" />
+          <span className="text-sm font-semibold text-white">{ktv.rating}</span>
           <span className="text-xs text-gray-300">({ktv.reviewCount})</span>
+        </div>
+
+        <div className="absolute bottom-4 left-4 right-4">
+          <h3 className="font-luxury font-bold text-xl text-white mb-1 group-hover:text-luxury-gold transition-luxury">
+            {ktv.name}
+          </h3>
+          <p className="text-luxury-gold font-semibold text-lg">
+            {ktv.priceRange}
+          </p>
         </div>
       </div>
 
-      <CardContent className="p-4">
-        <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-smooth">
-          {ktv.name}
-        </h3>
-        
-        <div className="space-y-2 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4" />
+      <CardContent className="p-6 bg-gradient-surface">
+        <div className="space-y-3 text-sm">
+          <div className="flex items-center gap-3 text-muted-foreground hover:text-luxury-gold transition-smooth">
+            <MapPin className="w-4 h-4 flex-shrink-0" />
             <span>{ktv.address}</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4" />
+          <div className="flex items-center gap-3 text-muted-foreground hover:text-luxury-gold transition-smooth">
+            <Clock className="w-4 h-4 flex-shrink-0" />
             <span>{ktv.hours}</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Phone className="w-4 h-4" />
+          <div className="flex items-center gap-3 text-muted-foreground hover:text-luxury-gold transition-smooth">
+            <Phone className="w-4 h-4 flex-shrink-0" />
             <span>{ktv.phone}</span>
           </div>
         </div>
 
-        <div className="mt-3">
-          <p className="text-sm font-medium text-primary">{ktv.priceRange}</p>
-          <p className="text-xs text-muted-foreground mt-1">{ktv.rooms} phòng</p>
+        <div className="mt-4 pt-4 border-t border-gradient">
+          <div className="flex items-center justify-between">
+            <p className="text-xs text-muted-foreground">{ktv.rooms} phòng</p>
+            <div className="flex gap-1">
+              {ktv.services.slice(0, 2).map((service, index) => (
+                <Badge key={index} variant="outline" className="text-xs">
+                  {service}
+                </Badge>
+              ))}
+            </div>
+          </div>
         </div>
       </CardContent>
 
       {showActions && (
-        <CardFooter className="p-4 pt-0">
+        <CardFooter className="p-6 pt-0">
           <Link to={`/ktv/${ktv.id}`} className="w-full">
-            <Button className="w-full">
-              Xem Chi Tiết
+            <Button className="w-full" variant="luxury">
+              Khám Phá Ngay
             </Button>
           </Link>
         </CardFooter>

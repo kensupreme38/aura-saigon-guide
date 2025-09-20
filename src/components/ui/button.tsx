@@ -9,14 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-gold",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-gold text-primary-foreground hover:bg-ktv-gold-dark shadow-gold font-semibold",
-        accent: "bg-accent text-accent-foreground hover:bg-accent/90",
+        default: "bg-gradient-gold text-primary-foreground hover:shadow-luxury transition-luxury font-medium",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 transition-smooth",
+        outline: "border border-gradient bg-transparent hover:bg-luxury-surface-light hover:shadow-elegant transition-luxury",
+        secondary: "bg-gradient-surface text-secondary-foreground hover:bg-luxury-surface-hover transition-luxury",
+        ghost: "hover:bg-luxury-surface hover:text-foreground transition-smooth",
+        link: "text-primary underline-offset-4 hover:underline transition-smooth",
+        luxury: "bg-gradient-luxury text-white hover:shadow-luxury hover:scale-105 transition-luxury font-semibold shadow-elegant",
+        premium: "bg-luxury-surface border border-gradient text-foreground hover:bg-luxury-surface-hover hover:shadow-premium transition-luxury font-medium",
+        gold: "bg-gradient-gold text-primary-foreground hover:shadow-glow hover:scale-105 transition-luxury font-semibold",
+        rose: "bg-luxury-rose text-white hover:shadow-rose-glow hover:scale-105 transition-luxury font-medium",
       },
       size: {
         default: "h-10 px-4 py-2",
