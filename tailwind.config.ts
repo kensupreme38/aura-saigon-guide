@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom KTV colors
+        ktv: {
+          gold: "hsl(var(--ktv-gold))",
+          "gold-dark": "hsl(var(--ktv-gold-dark))",
+          red: "hsl(var(--ktv-red))",
+          dark: "hsl(var(--ktv-dark))",
+          darker: "hsl(var(--ktv-darker))",
+          surface: "hsl(var(--ktv-surface))",
+          "surface-light": "hsl(var(--ktv-surface-light))",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
