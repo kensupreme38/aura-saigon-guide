@@ -474,7 +474,7 @@ const HomePage = () => {
               <a href="tel:+6582808072">
                 <Button size="lg" variant="luxury" className="gap-3 text-xl px-10 py-4 shadow-luxury">
                   <Phone className="w-5 h-5" />
-                  Call to Book: +65 8280 8072
+                  Call to Book
                 </Button>
               </a>
             </div>
@@ -485,7 +485,7 @@ const HomePage = () => {
       {/* Floating Call Button */}
       <a 
         href="tel:+6582808072"
-        className="fixed bottom-8 left-8 z-50 group"
+        className="fixed bottom-2 left-2 z-50 group"
         aria-label="Call us at +65 8280 8072"
       >
         <div className="relative">
@@ -493,14 +493,14 @@ const HomePage = () => {
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-luxury-purple/40 to-luxury-rose/40 animate-ping"></div>
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-luxury-purple/30 to-luxury-rose/30 animate-ping" style={{ animationDelay: '0.5s' }}></div>
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-luxury-purple/60 to-luxury-rose/60 blur-xl animate-pulse-slow"></div>
-          <div className="relative w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-luxury">
-            <Phone className="w-6 h-6 text-white" />
+          <div className="relative w-12 h-12 rounded-full bg-gradient-luxury flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-luxury">
+            <Phone className="w-5 h-5 text-white" />
           </div>
         </div>
       </a>
 
              {/* Social Links Panel - Right Side */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
+      <div className="fixed right-2 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
         {/* WhatsApp */}
         <a 
           href="https://wa.me/6582808072"
