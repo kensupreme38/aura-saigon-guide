@@ -241,10 +241,12 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="glass-effect border-gradient hover-lift">
               <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center mb-6 shadow-luxury">
-                  <Clock className="w-8 h-8 text-white" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury flex-shrink-0">
+                    <Clock className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-luxury font-bold">Operating Hours</h3>
                 </div>
-                <h3 className="text-2xl font-luxury font-bold mb-4">Operating Hours</h3>
                 <div className="space-y-3 text-muted-foreground">
                   <div className="flex justify-between items-center">
                     <span className="font-elegant">Daily:</span>
@@ -260,10 +262,12 @@ const HomePage = () => {
 
             <Card className="glass-effect border-gradient hover-lift">
               <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center mb-6 shadow-luxury">
-                  <Users className="w-8 h-8 text-white" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury flex-shrink-0">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-luxury font-bold">Hostesses</h3>
                 </div>
-                <h3 className="text-2xl font-luxury font-bold mb-4">Hostesses</h3>
                 <div className="space-y-3 text-muted-foreground">
                   <div className="flex justify-between items-center">
                     <span className="font-elegant">Number:</span>
@@ -286,10 +290,12 @@ const HomePage = () => {
 
             <Card className="glass-effect border-gradient hover-lift">
               <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center mb-6 shadow-luxury">
-                  <DollarSign className="w-8 h-8 text-white" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury flex-shrink-0">
+                    <DollarSign className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-luxury font-bold">Pricing</h3>
                 </div>
-                <h3 className="text-2xl font-luxury font-bold mb-4">Pricing</h3>
                 <div className="space-y-3 text-muted-foreground">
                   <div className="flex justify-between items-center">
                     <span className="font-elegant">Hostess Tip (HH):</span>
