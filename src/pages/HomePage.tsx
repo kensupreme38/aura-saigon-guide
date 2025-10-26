@@ -103,6 +103,94 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section id="gallery" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-luxury font-bold mb-6">
+              Our <span className="text-gradient-luxury">Gallery</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-elegant">
+              Experience the luxury and elegance of our premium KTV rooms
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
+              <img 
+                src={heroImage} 
+                alt="Luxury KTV Room Interior"
+                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                <div className="p-6 w-full">
+                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">VIP Room</h3>
+                  <p className="text-gray-200 font-elegant">Luxurious private karaoke experience</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
+              <img 
+                src="/src/assets/ktv-lounge-1.jpg" 
+                alt="KTV Lounge Area"
+                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                <div className="p-6 w-full">
+                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">Lounge Area</h3>
+                  <p className="text-gray-200 font-elegant">Relax in comfort and style</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
+              <img 
+                src="/src/assets/ktv-vip-room.jpg" 
+                alt="Premium VIP Suite"
+                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                <div className="p-6 w-full">
+                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">VIP Suite</h3>
+                  <p className="text-gray-200 font-elegant">Ultimate luxury experience</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift lg:col-span-2">
+              <img 
+                src="/src/assets/ktv-exterior.jpg" 
+                alt="Catwalk KTV Exterior"
+                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                <div className="p-6 w-full">
+                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">Our Venue</h3>
+                  <p className="text-gray-200 font-elegant">Located at Textile Centre, Jalan Sultan</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
+              <div className="w-full h-80 bg-gradient-to-br from-luxury-gold/20 via-luxury-rose/20 to-luxury-purple/20 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <Music className="w-24 h-24 mx-auto mb-6 text-gradient-luxury" />
+                  <h3 className="text-2xl font-luxury font-bold mb-4">Book Now</h3>
+                  <p className="text-muted-foreground font-elegant mb-6">Experience the difference</p>
+                  <a href="tel:93393265">
+                    <Button variant="luxury" className="gap-2">
+                      <Phone className="w-4 h-4" />
+                      9339 3265
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
