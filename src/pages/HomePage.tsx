@@ -4,7 +4,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Star, MapPin, Clock, Users, Music, Phone, DollarSign } from 'lucide-react';
 import { BlurFade } from '@/components/ui/blur-fade';
-import heroImage from '@/assets/hero-ktv.jpg';
 
 const HomePage = () => {
   return (
@@ -13,9 +12,12 @@ const HomePage = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src={heroImage} 
+            src="https://images.unsplash.com/photo-1574879948818-1cfda7aa5b1a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1920" 
             alt="Catwalk KTV Singapore - Luxury Karaoke Experience" 
             className="w-full h-full object-cover scale-105"
+            onError={(e) => {
+              e.currentTarget.src = 'https://via.placeholder.com/1920x1080/1a1a2e/ffffff?text=CATWALK+KTV';
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -23,8 +25,19 @@ const HomePage = () => {
         
         <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
           <BlurFade delay={0.2} direction="up">
-            <h1 className="text-6xl md:text-8xl font-luxury font-bold text-white mb-6 leading-tight">
-              CATWALK
+            <h1 className="text-6xl md:text-8xl font-luxury font-bold mb-6 leading-tight">
+              <span 
+                className="inline-block bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: 'url(https://64.media.tumblr.com/fe46498759b6c038b14262441a0a48cb/4d488df637ef986c-7d/s540x810/f211da5f6df8cb5bbbdb85df56032ebdf083d792.gifv)',
+                  WebkitBackgroundClip: 'text',
+                  backgroundClip: 'text',
+                  backgroundSize: 'cover',
+                  WebkitTextFillColor: 'transparent'
+                }}
+              >
+                CATWALK
+              </span>
               <span className="text-gradient-luxury block mt-3">KTV</span>
             </h1>
           </BlurFade>
@@ -119,9 +132,12 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
               <img 
-                src={heroImage} 
+                src="https://images.pexels.com/photos/6312354/pexels-photo-6312354.jpeg?auto=compress&cs=tinysrgb&w=800" 
                 alt="Luxury KTV Room Interior"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Luxury+KTV+Room';
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
                 <div className="p-6 w-full">
@@ -133,9 +149,12 @@ const HomePage = () => {
 
             <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
               <img 
-                src="/src/assets/ktv-lounge-1.jpg" 
+                src="https://images.pexels.com/photos/760705/pexels-photo-760705.jpeg?auto=compress&cs=tinysrgb&w=800" 
                 alt="KTV Lounge Area"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Lounge+Area';
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
                 <div className="p-6 w-full">
@@ -147,9 +166,12 @@ const HomePage = () => {
 
             <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
               <img 
-                src="/src/assets/ktv-vip-room.jpg" 
+                src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800" 
                 alt="Premium VIP Suite"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=VIP+Suite';
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
                 <div className="p-6 w-full">
@@ -161,9 +183,12 @@ const HomePage = () => {
 
             <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift lg:col-span-2">
               <img 
-                src="/src/assets/ktv-exterior.jpg" 
+                src="https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1200" 
                 alt="Catwalk KTV Exterior"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://via.placeholder.com/1200x400/1a1a2e/ffffff?text=Our+Venue';
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
                 <div className="p-6 w-full">
@@ -299,11 +324,11 @@ const HomePage = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <Card className="glass-effect border-gradient">
-              <CardContent className="p-8">
+            <Card className="glass-effect border-gradient h-full">
+              <CardContent className="p-8 h-full flex flex-col">
                 <h3 className="text-3xl font-luxury font-bold mb-8 text-gradient-luxury">Contact Information</h3>
                 
-                <div className="space-y-6">
+                <div className="space-y-6 flex-grow">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-luxury flex items-center justify-center flex-shrink-0 shadow-luxury">
                       <MapPin className="w-6 h-6 text-white" />
@@ -356,16 +381,19 @@ const HomePage = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-effect border-gradient overflow-hidden">
-              <CardContent className="p-0">
-                <div className="w-full h-full min-h-[500px] bg-gradient-to-br from-luxury-gold/10 to-luxury-rose/10 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <MapPin className="w-24 h-24 mx-auto mb-6 text-gradient-luxury" />
-                    <h3 className="text-2xl font-luxury font-bold mb-4">Textile Centre</h3>
-                    <p className="text-muted-foreground font-elegant max-w-md">
-                      Conveniently located in the Textile Centre, accessible via multiple MRT lines and bus routes.
-                    </p>
-                  </div>
+            <Card className="glass-effect border-gradient overflow-hidden h-full">
+              <CardContent className="p-0 h-full flex flex-col">
+                <div className="w-full h-full flex-1 min-h-[500px]">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6808.981179286241!2d103.8589041768311!3d1.3038333617181594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da192893a8daaf%3A0x3513e16c39884197!2sCATWALK%20Restaurant!5e1!3m2!1sen!2s!4v1761460444426!5m2!1sen!2s" 
+                    width="100%" 
+                    height="100%" 
+                    style={{border: 0, minHeight: '500px'}} 
+                    allowFullScreen={true}
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="CATWALK KTV Location"
+                  />
                 </div>
               </CardContent>
             </Card>
@@ -423,55 +451,55 @@ const HomePage = () => {
       </a>
 
              {/* Social Links Panel - Right Side */}
-       <div className="fixed right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
-         {/* WhatsApp */}
-         <a 
-           href="https://wa.me/6582808072"
-           target="_blank"
-           rel="noopener noreferrer"
-           className="group relative"
-         >
-           <div className="w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
-             <img 
-               src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png" 
-               alt="WhatsApp" 
-               className="w-full h-full object-cover"
-             />
-           </div>
-         </a>
+      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
+        {/* WhatsApp */}
+        <a 
+          href="https://wa.me/6582808072"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative"
+        >
+          <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
+            <img 
+              src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png" 
+              alt="WhatsApp" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </a>
 
-         {/* Telegram */}
-         <a 
-           href="https://t.me/+6582808072"
-           target="_blank"
-           rel="noopener noreferrer"
-           className="group relative"
-         >
-           <div className="w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
-             <img 
-               src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" 
-               alt="Telegram" 
-               className="w-full h-full object-cover"
-             />
-           </div>
-         </a>
+        {/* Telegram */}
+        <a 
+          href="https://t.me/+6582808072"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative"
+        >
+          <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
+            <img 
+              src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" 
+              alt="Telegram" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </a>
 
-         {/* YouTube */}
-         <a 
-           href="https://youtube.com/@catwalkktv"
-           target="_blank"
-           rel="noopener noreferrer"
-           className="group relative"
-         >
-           <div className="w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
-             <img 
-               src="https://cdn-icons-png.flaticon.com/128/3670/3670209.png" 
-               alt="YouTube" 
-               className="w-full h-full object-cover"
-             />
-           </div>
-         </a>
-       </div>
+        {/* YouTube */}
+        <a 
+          href="https://youtube.com/@catwalkktv"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative"
+        >
+          <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
+            <img 
+              src="https://cdn-icons-png.flaticon.com/128/3670/3670209.png" 
+              alt="YouTube" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </a>
+      </div>
     </div>
   );
 };
