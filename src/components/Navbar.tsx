@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Search, MapPin } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
 
-  const isActive = (path: string) => location.pathname === path;
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setIsOpen(false);
+    }
+  };
 
   const navItems = [
-    { path: '/', label: 'Trang Chủ' },
-    { path: '/ktv-list', label: 'Danh Sách KTV' },
-    { path: '/articles', label: 'Bài Viết' },
-    { path: '/contact', label: 'Liên Hệ' },
+    { id: 'about', label: 'About' },
+    { id: 'services', label: 'Services' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   return (
@@ -21,35 +24,33 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center space-x-3 group">
             <div className="w-10 h-10 bg-gradient-luxury rounded-xl flex items-center justify-center shadow-luxury hover:shadow-glow transition-luxury">
-              <span className="text-white font-luxury font-bold text-lg">A</span>
+              <span className="text-white font-luxury font-bold text-lg">C</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-luxury font-bold text-gradient-luxury">Aura KTV</span>
-              <span className="text-xs text-muted-foreground font-elegant">Luxury Experience</span>
+              <span className="text-xl font-luxury font-bold text-gradient-luxury">Catwalk KTV</span>
+              <span className="text-xs text-muted-foreground font-elegant">Singapore's Premier</span>
             </div>
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-luxury ${
-                  isActive(item.path)
-                    ? 'text-luxury-gold bg-luxury-surface-light shadow-elegant'
-                    : 'text-foreground hover:text-luxury-gold hover:bg-luxury-surface'
-                }`}
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="px-4 py-2 rounded-lg text-sm font-medium transition-luxury text-foreground hover:text-luxury-gold hover:bg-luxury-surface"
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
-            <Button variant="premium" size="sm" className="gap-2">
-              <Search className="w-4 h-4" />
-              Tìm Kiếm
-            </Button>
+            <a href="tel:93393265">
+              <Button variant="luxury" size="sm" className="gap-2">
+                <Phone className="w-4 h-4" />
+                Book Now
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -69,23 +70,20 @@ const Navbar = () => {
           <div className="md:hidden py-4 border-t border-gradient animate-fade-in">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-luxury ${
-                    isActive(item.path)
-                      ? 'text-luxury-gold bg-gradient-surface shadow-elegant'
-                      : 'text-foreground hover:text-luxury-gold hover:bg-luxury-surface'
-                  }`}
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="px-4 py-3 rounded-lg text-sm font-medium transition-luxury text-foreground hover:text-luxury-gold hover:bg-luxury-surface text-left"
                 >
                   {item.label}
-                </Link>
+                </button>
               ))}
-              <Button variant="premium" size="sm" className="gap-2 mt-3">
-                <Search className="w-4 h-4" />
-                Tìm Kiếm
-              </Button>
+              <a href="tel:93393265" className="mt-3">
+                <Button variant="luxury" size="sm" className="gap-2 w-full">
+                  <Phone className="w-4 h-4" />
+                  Book Now
+                </Button>
+              </a>
             </div>
           </div>
         )}

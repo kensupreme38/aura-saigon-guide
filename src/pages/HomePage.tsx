@@ -1,190 +1,297 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import KTVCard from '@/components/KTVCard';
-import { featuredKTVs, districts } from '@/data/ktvData';
-import { Star, MapPin, TrendingUp, Users, Music, Search } from 'lucide-react';
+import { Star, MapPin, Clock, Users, Music, Phone, DollarSign } from 'lucide-react';
 import heroImage from '@/assets/hero-ktv.jpg';
 
 const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={heroImage} 
-            alt="Luxury KTV Interior" 
+            alt="Catwalk KTV Singapore - Luxury Karaoke Experience" 
             className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         </div>
         
-        <div className="relative z-10 text-center max-w-5xl mx-auto px-4 animate-fade-up">
-          <div className="mb-6">
-            <Badge className="bg-gradient-luxury text-white border-0 text-sm px-4 py-2 font-medium shadow-luxury">
-              ✨ Trải Nghiệm Karaoke Đẳng Cấp
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-4 animate-fade-up">
+          <div className="mb-8">
+            <Badge className="bg-gradient-luxury text-white border-0 text-base px-6 py-3 font-medium shadow-luxury">
+              ✨ Singapore's Premier KTV Destination
             </Badge>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-luxury font-bold text-white mb-8 leading-tight">
-            Khám Phá KTV 
-            <span className="text-gradient-luxury block mt-2">Tốt Nhất Sài Gòn</span>
+          <h1 className="text-6xl md:text-8xl font-luxury font-bold text-white mb-6 leading-tight">
+            CATWALK
+            <span className="text-gradient-luxury block mt-3">KTV</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto font-elegant leading-relaxed">
-            Hướng dẫn toàn diện về các địa điểm karaoke sang trọng và chất lượng cao tại TP.HCM. 
-            Thông tin chính xác, đánh giá chân thực từ cộng đồng.
+          <p className="text-2xl md:text-3xl text-gray-200 mb-12 max-w-4xl mx-auto font-elegant leading-relaxed">
+            Experience Luxury Entertainment at Singapore's Largest KTV Complex
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link to="/ktv-list">
-              <Button size="lg" variant="luxury" className="gap-3 text-lg px-8 py-4 animate-pulse-luxury">
-                <Search className="w-5 h-5" />
-                Khám Phá Ngay
+            <a href="#contact">
+              <Button size="lg" variant="luxury" className="gap-3 text-xl px-10 py-6 animate-pulse-luxury">
+                <Phone className="w-6 h-6" />
+                Book Now
               </Button>
-            </Link>
-            <Link to="/articles">
-              <Button variant="premium" size="lg" className="gap-3 text-lg px-8 py-4 glass-effect">
-                <Music className="w-5 h-5" />
-                Đọc Bài Viết
+            </a>
+            <a href="#about">
+              <Button variant="premium" size="lg" className="gap-3 text-xl px-10 py-6 glass-effect">
+                <Music className="w-6 h-6" />
+                Learn More
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
 
         {/* Floating elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-luxury-gold/20 rounded-full blur-xl animate-float"></div>
-        <div className="absolute bottom-32 right-16 w-32 h-32 bg-luxury-rose/20 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-luxury-purple/20 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-10 w-24 h-24 bg-luxury-gold/20 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute bottom-32 right-16 w-40 h-40 bg-luxury-rose/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-luxury-purple/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center group hover-lift">
-              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">50+</div>
-              <div className="text-muted-foreground font-elegant">Địa Điểm KTV</div>
-            </div>
-            <div className="text-center group hover-lift">
-              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">1000+</div>
-              <div className="text-muted-foreground font-elegant">Đánh Giá</div>
-            </div>
-            <div className="text-center group hover-lift">
-              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">9</div>
-              <div className="text-muted-foreground font-elegant">Quận Huyện</div>
-            </div>
-            <div className="text-center group hover-lift">
-              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">24/7</div>
-              <div className="text-muted-foreground font-elegant">Hỗ Trợ</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured KTVs */}
-      <section className="py-16">
+      {/* Quick Info Section */}
+      <section id="about" className="py-20 bg-gradient-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-luxury font-bold mb-6">
-              KTV <span className="text-gradient-luxury">Nổi Bật</span>
+            <h2 className="text-5xl md:text-6xl font-luxury font-bold mb-6">
+              Why Choose <span className="text-gradient-luxury">Catwalk KTV?</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-elegant leading-relaxed">
-              Những địa điểm karaoke được đánh giá cao nhất và được yêu thích bởi cộng đồng tại TP.HCM
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-elegant">
+              Singapore's largest KTV complex with 55 luxurious rooms and premium service
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {featuredKTVs.slice(0, 6).map((ktv) => (
-              <KTVCard key={ktv.id} ktv={ktv} />
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link to="/ktv-list">
-              <Button size="lg" variant="outline">
-                Xem Tất Cả KTV
-              </Button>
-            </Link>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            <div className="text-center group hover-lift">
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury">
+                <Music className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">55</div>
+              <div className="text-muted-foreground font-elegant">Luxury Rooms</div>
+            </div>
+            <div className="text-center group hover-lift">
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury">
+                <Users className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">30+</div>
+              <div className="text-muted-foreground font-elegant">Professional Hostesses</div>
+            </div>
+            <div className="text-center group hover-lift">
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury">
+                <Star className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">VIP</div>
+              <div className="text-muted-foreground font-elegant">Premium Service</div>
+            </div>
+            <div className="text-center group hover-lift">
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury">
+                <Clock className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl md:text-5xl font-luxury font-bold text-gradient-luxury mb-3">11h</div>
+              <div className="text-muted-foreground font-elegant">Daily Operation</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Districts Section */}
-      <section className="py-16 bg-ktv-surface">
+      {/* Services Section */}
+      <section id="services" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Tìm Theo <span className="text-gradient-gold">Khu Vực</span>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-luxury font-bold mb-6">
+              Our <span className="text-gradient-luxury">Services</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Khám phá các địa điểm karaoke theo từng quận huyện tại TP.HCM
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-elegant">
+              Premium entertainment with exceptional Vietnamese hostesses
             </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {districts.map((district) => (
-              <Link key={district} to={`/ktv-list?district=${district}`}>
-                <Card className="hover:shadow-lg transition-smooth cursor-pointer group">
-                  <CardContent className="p-6 text-center">
-                    <MapPin className="w-8 h-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-smooth" />
-                    <h3 className="font-semibold group-hover:text-primary transition-smooth">
-                      {district}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {Math.floor(Math.random() * 10) + 5}+ địa điểm
-                    </p>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Tại Sao Chọn <span className="text-gradient-gold">Aura KTV?</span>
-            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
+            <Card className="glass-effect border-gradient hover-lift">
               <CardContent className="p-8">
-                <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Thông Tin Cập Nhật</h3>
-                <p className="text-muted-foreground">
-                  Liên tục cập nhật thông tin mới nhất về giá cả, dịch vụ và chất lượng các địa điểm KTV
-                </p>
+                <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center mb-6 shadow-luxury">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-luxury font-bold mb-4">Operating Hours</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <div className="flex justify-between items-center">
+                    <span className="font-elegant">Daily:</span>
+                    <span className="font-semibold text-gradient-luxury">4PM - 3AM</span>
+                  </div>
+                  <div className="border-t border-border/50 pt-3 mt-3">
+                    <p className="text-sm font-elegant">Happy Hour: 3:30PM - 7PM</p>
+                    <p className="text-sm font-elegant">Normal Hours: 7PM - 3AM</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="glass-effect border-gradient hover-lift">
               <CardContent className="p-8">
-                <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Đánh Giá Thực Tế</h3>
-                <p className="text-muted-foreground">
-                  Các review và đánh giá từ khách hàng thực tế, giúp bạn có cái nhìn chính xác nhất
-                </p>
+                <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center mb-6 shadow-luxury">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-luxury font-bold mb-4">Hostesses</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <div className="flex justify-between items-center">
+                    <span className="font-elegant">Number:</span>
+                    <span className="font-semibold text-gradient-luxury">30 - 35</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-elegant">Age:</span>
+                    <span className="font-semibold">20 - 26</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-elegant">Nationality:</span>
+                    <span className="font-semibold">Vietnamese</span>
+                  </div>
+                  <div className="border-t border-border/50 pt-3 mt-3">
+                    <p className="text-sm font-elegant">Languages: Vietnamese, English, Chinese</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="glass-effect border-gradient hover-lift">
               <CardContent className="p-8">
-                <Star className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Chất Lượng Cao</h3>
-                <p className="text-muted-foreground">
-                  Chỉ giới thiệu những địa điểm có chất lượng dịch vụ tốt và được khách hàng tin tưởng
-                </p>
+                <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center mb-6 shadow-luxury">
+                  <DollarSign className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-luxury font-bold mb-4">Pricing</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <div className="flex justify-between items-center">
+                    <span className="font-elegant">Hostess Tip (HH):</span>
+                    <span className="font-semibold text-gradient-luxury">S$70</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-elegant">Hostess Tip (NH):</span>
+                    <span className="font-semibold text-gradient-luxury">S$100</span>
+                  </div>
+                  <div className="border-t border-border/50 pt-3 mt-3">
+                    <p className="text-sm font-elegant">Small Room: 1 Tower</p>
+                    <p className="text-sm font-elegant">Medium Room: 2 Towers/1 Bottle</p>
+                    <p className="text-sm font-elegant">Large Room: 4 Towers/2 Bottles</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section id="contact" className="py-20 bg-gradient-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-luxury font-bold mb-6">
+              Visit <span className="text-gradient-luxury">Us</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-elegant">
+              Located at the heart of Singapore's entertainment district
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Card className="glass-effect border-gradient">
+              <CardContent className="p-8">
+                <h3 className="text-3xl font-luxury font-bold mb-8 text-gradient-luxury">Contact Information</h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-luxury flex items-center justify-center flex-shrink-0 shadow-luxury">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-lg">Address</h4>
+                      <p className="text-muted-foreground font-elegant">
+                        200 Jalan Sultan<br />
+                        Textile Centre Level 7<br />
+                        Singapore 199018
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-luxury flex items-center justify-center flex-shrink-0 shadow-luxury">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-lg">Contact</h4>
+                      <p className="text-muted-foreground font-elegant">
+                        Booking: <span className="text-gradient-luxury font-semibold">9339 3265</span><br />
+                        WeChat: <span className="text-gradient-luxury font-semibold">cleonteo</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-luxury flex items-center justify-center flex-shrink-0 shadow-luxury">
+                      <Clock className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 text-lg">Hours</h4>
+                      <p className="text-muted-foreground font-elegant">
+                        Monday - Sunday<br />
+                        <span className="text-gradient-luxury font-semibold">4:00 PM - 3:00 AM</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-8 border-t border-border/50">
+                  <a href="tel:93393265">
+                    <Button size="lg" variant="luxury" className="w-full gap-3 text-lg shadow-luxury">
+                      <Phone className="w-5 h-5" />
+                      Book Your Room Now
+                    </Button>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="glass-effect border-gradient overflow-hidden">
+              <CardContent className="p-0">
+                <div className="w-full h-full min-h-[500px] bg-gradient-to-br from-luxury-gold/10 to-luxury-rose/10 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <MapPin className="w-24 h-24 mx-auto mb-6 text-gradient-luxury" />
+                    <h3 className="text-2xl font-luxury font-bold mb-4">Textile Centre</h3>
+                    <p className="text-muted-foreground font-elegant max-w-md">
+                      Conveniently located in the Textile Centre, accessible via multiple MRT lines and bus routes.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold/20 via-luxury-rose/20 to-luxury-purple/20 blur-3xl"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-5xl md:text-6xl font-luxury font-bold mb-6">
+            Ready for an <span className="text-gradient-luxury">Unforgettable</span> Experience?
+          </h2>
+          <p className="text-xl text-muted-foreground mb-10 font-elegant leading-relaxed">
+            Book your private room today and enjoy Singapore's finest KTV entertainment
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="tel:93393265">
+              <Button size="lg" variant="luxury" className="gap-3 text-xl px-10 py-6 shadow-luxury">
+                <Phone className="w-6 h-6" />
+                Call to Book: 9339 3265
+              </Button>
+            </a>
           </div>
         </div>
       </section>
