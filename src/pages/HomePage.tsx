@@ -7,14 +7,16 @@ import { BlurFade } from '@/components/ui/blur-fade';
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section aria-label="Hero section with KTV branding" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1574879948818-1cfda7aa5b1a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1920" 
-            alt="Catwalk KTV Singapore - Luxury Karaoke Experience" 
+            alt="Catwalk KTV Singapore - Luxury Karaoke Experience with elegant interior" 
             className="w-full h-full object-cover scale-105"
+            loading="eager"
+            fetchPriority="high"
             onError={(e) => {
               e.currentTarget.src = 'https://via.placeholder.com/1920x1080/1a1a2e/ffffff?text=CATWALK+KTV';
             }}
@@ -73,10 +75,10 @@ const HomePage = () => {
       </section>
 
       {/* Quick Info Section */}
-      <section id="about" className="py-20 bg-gradient-surface">
+      <section id="about" className="py-20 bg-gradient-surface" aria-labelledby="about-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-luxury font-bold mb-6">
+            <h2 id="about-heading" className="text-5xl md:text-6xl font-luxury font-bold mb-6">
               Why Choose <span className="text-gradient-luxury">Catwalk KTV?</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-elegant">
@@ -118,10 +120,10 @@ const HomePage = () => {
       </section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-20">
+      <section id="gallery" className="py-20" aria-labelledby="gallery-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-luxury font-bold mb-6">
+            <h2 id="gallery-heading" className="text-5xl md:text-6xl font-luxury font-bold mb-6">
               Our <span className="text-gradient-luxury">Gallery</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-elegant">
@@ -133,8 +135,11 @@ const HomePage = () => {
             <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
               <img 
                 src="https://images.pexels.com/photos/6312354/pexels-photo-6312354.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Luxury KTV Room Interior"
+                alt="Luxury KTV Room Interior with modern design and premium entertainment setup"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                width="800"
+                height="320"
                 onError={(e) => {
                   e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Luxury+KTV+Room';
                 }}
@@ -150,8 +155,11 @@ const HomePage = () => {
             <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
               <img 
                 src="https://images.pexels.com/photos/760705/pexels-photo-760705.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="KTV Lounge Area"
+                alt="KTV Lounge Area with comfortable seating and elegant ambiance"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                width="800"
+                height="320"
                 onError={(e) => {
                   e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Lounge+Area';
                 }}
@@ -167,8 +175,11 @@ const HomePage = () => {
             <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
               <img 
                 src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Premium VIP Suite"
+                alt="Premium VIP Suite with luxury decor and high-end amenities"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                width="800"
+                height="320"
                 onError={(e) => {
                   e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=VIP+Suite';
                 }}
@@ -184,8 +195,11 @@ const HomePage = () => {
             <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift lg:col-span-2">
               <img 
                 src="https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                alt="Catwalk KTV Exterior"
+                alt="Catwalk KTV Exterior view at Textile Centre, Jalan Sultan"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                width="1200"
+                height="320"
                 onError={(e) => {
                   e.currentTarget.src = 'https://via.placeholder.com/1200x400/1a1a2e/ffffff?text=Our+Venue';
                 }}
@@ -227,10 +241,10 @@ const HomePage = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20">
+      <section id="services" className="py-20" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-luxury font-bold mb-6">
+            <h2 id="services-heading" className="text-5xl md:text-6xl font-luxury font-bold mb-6">
               Our <span className="text-gradient-luxury">Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-elegant">
@@ -318,10 +332,10 @@ const HomePage = () => {
       </section>
 
       {/* Location Section */}
-      <section id="contact" className="py-20 bg-gradient-surface">
+      <section id="contact" className="py-20 bg-gradient-surface" aria-labelledby="contact-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-luxury font-bold mb-6">
+            <h2 id="contact-heading" className="text-5xl md:text-6xl font-luxury font-bold mb-6">
               Visit <span className="text-gradient-luxury">Us</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-elegant">
@@ -408,7 +422,7 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden" aria-label="Call to action section">
         <div 
           className="absolute inset-0 blur-3xl animate-gradient-xy-fast"
           style={{
@@ -444,6 +458,7 @@ const HomePage = () => {
       <a 
         href="tel:+6582808072"
         className="fixed bottom-8 left-8 z-50 group"
+        aria-label="Call us at +65 8280 8072"
       >
         <div className="relative">
           {/* Ripple effect layers */}
@@ -464,12 +479,16 @@ const HomePage = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="group relative"
+          aria-label="Contact us on WhatsApp at +65 8280 8072"
         >
           <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
             <img 
               src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png" 
-              alt="WhatsApp" 
+              alt="WhatsApp - Contact us at +65 8280 8072" 
               className="w-full h-full object-cover"
+              loading="lazy"
+              width="128"
+              height="128"
             />
           </div>
         </a>
@@ -480,12 +499,16 @@ const HomePage = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="group relative"
+          aria-label="Contact us on Telegram"
         >
           <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
             <img 
               src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" 
-              alt="Telegram" 
+              alt="Telegram - Message us on Telegram" 
               className="w-full h-full object-cover"
+              loading="lazy"
+              width="128"
+              height="128"
             />
           </div>
         </a>
@@ -496,17 +519,21 @@ const HomePage = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="group relative"
+          aria-label="Follow us on YouTube"
         >
           <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
             <img 
               src="https://cdn-icons-png.flaticon.com/128/3670/3670209.png" 
-              alt="YouTube" 
+              alt="YouTube - Watch our videos on YouTube" 
               className="w-full h-full object-cover"
+              loading="lazy"
+              width="128"
+              height="128"
             />
           </div>
         </a>
       </div>
-    </div>
+    </main>
   );
 };
 

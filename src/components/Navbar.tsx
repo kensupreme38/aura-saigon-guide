@@ -9,8 +9,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-luxury rounded-xl flex items-center justify-center shadow-luxury hover:shadow-glow transition-luxury">
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+            className="flex items-center space-x-3 group"
+            aria-label="Go to homepage"
+          >
+            <div className="w-10 h-10 bg-gradient-luxury rounded-xl flex items-center justify-center shadow-luxury hover:shadow-glow transition-luxury" aria-hidden="true">
               <span className="text-white font-luxury font-bold text-lg">C</span>
             </div>
             <div className="flex flex-col">
@@ -21,9 +25,9 @@ const Navbar = () => {
 
           {/* Navigation - Both Desktop and Mobile */}
           <div className="flex items-center space-x-8">
-            <a href="tel:93393265">
+            <a href="tel:+6582808072" aria-label="Call us at +65 8280 8072">
               <Button variant="luxury" size="sm" className="gap-2">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4" aria-hidden="true" />
                 Book Now
               </Button>
             </a>
