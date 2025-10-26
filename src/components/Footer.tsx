@@ -57,15 +57,10 @@ const Footer = () => {
 
             {/* Telegram */}
             <div className="flex items-start">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mr-3 overflow-hidden" aria-hidden="true">
-                <img 
-                  src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" 
-                  alt="Telegram icon" 
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width="128"
-                  height="128"
-                />
+              <div className="w-10 h-10 rounded-full bg-[#0088cc] flex items-center justify-center flex-shrink-0 mr-3" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.83 8.618c-.138.579-.492.722-.998.449l-2.755-2.03-1.33 1.277c-.147.147-.27.27-.553.27l.198-2.797 5.11-4.617c.223-.195-.049-.304-.345-.11l-6.304 3.97-2.717-.843c-.591-.194-.607-.59.112-.882l10.557-4.08c.49-.18.916.114.752.734z"/>
+                </svg>
               </div>
               <div>
                 <div className="font-semibold text-foreground">Telegram</div>

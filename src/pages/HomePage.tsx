@@ -7,7 +7,12 @@ import { BlurFade } from '@/components/ui/blur-fade';
 
 const HomePage = () => {
   return (
-    <main className="min-h-screen">
+    <>
+      {/* Skip to main content for accessibility */}
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-luxury-gold focus:text-luxury-dark focus:rounded-md focus:shadow-lg">
+        Skip to main content
+      </a>
+      <main id="main-content" className="min-h-screen" role="main">
       {/* Hero Section */}
       <section aria-label="Hero section with KTV branding" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -17,6 +22,13 @@ const HomePage = () => {
             className="w-full h-full object-cover scale-105"
             loading="eager"
             fetchPriority="high"
+            decoding="async"
+            width={1920}
+            height={1080}
+            sizes="100vw"
+            srcSet="https://images.unsplash.com/photo-1574879948818-1cfda7aa5b1a?ixlib=rb-4.1.0&auto=format&fit=crop&w=640&q=75 640w,
+                    https://images.unsplash.com/photo-1574879948818-1cfda7aa5b1a?ixlib=rb-4.1.0&auto=format&fit=crop&w=1280&q=75 1280w,
+                    https://images.unsplash.com/photo-1574879948818-1cfda7aa5b1a?ixlib=rb-4.1.0&auto=format&fit=crop&w=1920&q=75 1920w"
             onError={(e) => {
               e.currentTarget.src = 'https://via.placeholder.com/1920x1080/1a1a2e/ffffff?text=CATWALK+KTV';
             }}
@@ -53,14 +65,14 @@ const HomePage = () => {
           <BlurFade delay={0.8} direction="up">
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a href="tel:+6582808072">
-                <Button size="lg" variant="luxury" className="gap-3 text-xl px-10 py-6 animate-pulse-luxury hover:scale-105 transition-transform">
-                  <Phone className="w-6 h-6" />
+                <Button size="lg" variant="luxury" className="gap-3 text-xl px-10 py-4 animate-pulse-luxury hover:scale-105 transition-transform">
+                  <Phone className="w-5 h-5" />
                   Book Now
                 </Button>
               </a>
               <a href="#about">
-                <Button variant="premium" size="lg" className="gap-3 text-xl px-10 py-6 glass-effect hover:scale-105 transition-transform">
-                  <Music className="w-6 h-6" />
+                <Button variant="premium" size="lg" className="gap-3 text-xl px-10 py-4 glass-effect hover:scale-105 transition-transform">
+                  <Music className="w-5 h-5" />
                   Learn More
                 </Button>
               </a>
@@ -138,8 +150,12 @@ const HomePage = () => {
                 alt="Luxury KTV Room Interior with modern design and premium entertainment setup"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
-                width="800"
-                height="320"
+                decoding="async"
+                width={800}
+                height={320}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                srcSet="https://images.pexels.com/photos/6312354/pexels-photo-6312354.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                        https://images.pexels.com/photos/6312354/pexels-photo-6312354.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
                 onError={(e) => {
                   e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Luxury+KTV+Room';
                 }}
@@ -158,8 +174,12 @@ const HomePage = () => {
                 alt="KTV Lounge Area with comfortable seating and elegant ambiance"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
-                width="800"
-                height="320"
+                decoding="async"
+                width={800}
+                height={320}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                srcSet="https://images.pexels.com/photos/760705/pexels-photo-760705.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                        https://images.pexels.com/photos/760705/pexels-photo-760705.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
                 onError={(e) => {
                   e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Lounge+Area';
                 }}
@@ -178,8 +198,12 @@ const HomePage = () => {
                 alt="Premium VIP Suite with luxury decor and high-end amenities"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
-                width="800"
-                height="320"
+                decoding="async"
+                width={800}
+                height={320}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                srcSet="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
+                        https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
                 onError={(e) => {
                   e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=VIP+Suite';
                 }}
@@ -198,8 +222,12 @@ const HomePage = () => {
                 alt="Catwalk KTV Exterior view at Textile Centre, Jalan Sultan"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
-                width="1200"
-                height="320"
+                decoding="async"
+                width={1200}
+                height={320}
+                sizes="(max-width: 1024px) 100vw, 66vw"
+                srcSet="https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=600 600w,
+                        https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w"
                 onError={(e) => {
                   e.currentTarget.src = 'https://via.placeholder.com/1200x400/1a1a2e/ffffff?text=Our+Venue';
                 }}
@@ -444,8 +472,8 @@ const HomePage = () => {
           <BlurFade delay={0.6} direction="up">
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a href="tel:+6582808072">
-                <Button size="lg" variant="luxury" className="gap-3 text-xl px-10 py-6 shadow-luxury">
-                  <Phone className="w-6 h-6" />
+                <Button size="lg" variant="luxury" className="gap-3 text-xl px-10 py-4 shadow-luxury">
+                  <Phone className="w-5 h-5" />
                   Call to Book: +65 8280 8072
                 </Button>
               </a>
@@ -465,31 +493,26 @@ const HomePage = () => {
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-luxury-purple/40 to-luxury-rose/40 animate-ping"></div>
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-luxury-purple/30 to-luxury-rose/30 animate-ping" style={{ animationDelay: '0.5s' }}></div>
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-luxury-purple/60 to-luxury-rose/60 blur-xl animate-pulse-slow"></div>
-          <div className="relative w-14 h-14 rounded-full bg-gradient-luxury flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-luxury">
-            <Phone className="w-5 h-5 text-white" />
+          <div className="relative w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-luxury">
+            <Phone className="w-6 h-6 text-white" />
           </div>
         </div>
       </a>
 
              {/* Social Links Panel - Right Side */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
+      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
         {/* WhatsApp */}
         <a 
           href="https://wa.me/6582808072"
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative"
+          className="group relative touch-target-large"
           aria-label="Contact us on WhatsApp at +65 8280 8072"
         >
-          <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
-            <img 
-              src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png" 
-              alt="WhatsApp - Contact us at +65 8280 8072" 
-              className="w-full h-full object-cover"
-              loading="lazy"
-              width="128"
-              height="128"
-            />
+          <div className="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="transition-transform group-hover:scale-110" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.645.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.58-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
           </div>
         </a>
 
@@ -498,18 +521,13 @@ const HomePage = () => {
           href="https://t.me/+6582808072"
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative"
+          className="group relative touch-target-large"
           aria-label="Contact us on Telegram"
         >
-          <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
-            <img 
-              src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" 
-              alt="Telegram - Message us on Telegram" 
-              className="w-full h-full object-cover"
-              loading="lazy"
-              width="128"
-              height="128"
-            />
+          <div className="w-12 h-12 rounded-full bg-[#0088cc] flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="transition-transform group-hover:scale-110" aria-hidden="true">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.83 8.618c-.138.579-.492.722-.998.449l-2.755-2.03-1.33 1.277c-.147.147-.27.27-.553.27l.198-2.797 5.11-4.617c.223-.195-.049-.304-.345-.11l-6.304 3.97-2.717-.843c-.591-.194-.607-.59.112-.882l10.557-4.08c.49-.18.916.114.752.734z"/>
+            </svg>
           </div>
         </a>
 
@@ -518,22 +536,18 @@ const HomePage = () => {
           href="https://youtube.com/@catwalkktv"
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative"
+          className="group relative touch-target-large"
           aria-label="Follow us on YouTube"
         >
-          <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl overflow-hidden">
-            <img 
-              src="https://cdn-icons-png.flaticon.com/128/3670/3670209.png" 
-              alt="YouTube - Watch our videos on YouTube" 
-              className="w-full h-full object-cover"
-              loading="lazy"
-              width="128"
-              height="128"
-            />
+          <div className="w-12 h-12 rounded-full bg-[#FF0000] flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="transition-transform group-hover:scale-110" aria-hidden="true">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
           </div>
         </a>
       </div>
-    </main>
+      </main>
+    </>
   );
 };
 
