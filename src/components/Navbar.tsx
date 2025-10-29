@@ -46,8 +46,8 @@ const Navbar = () => {
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-luxury font-bold text-gradient-luxury">Catwalk KTV</span>
-              <span className="text-xs text-muted-foreground font-elegant">Singapore's Premier</span>
+              <span className="text-lg font-luxury font-bold text-gradient-luxury">Catwalk KTV</span>
+              <span className="text-[10px] text-muted-foreground font-elegant">Singapore's Premier</span>
             </div>
           </button>
 
