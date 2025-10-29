@@ -14,8 +14,36 @@ const Navbar = () => {
             className="flex items-center space-x-3 group min-touch-target p-2 -ml-2"
             aria-label="Go to homepage"
           >
-            <div className="w-11 h-11 bg-gradient-luxury rounded-xl flex items-center justify-center shadow-luxury hover:shadow-glow transition-luxury" aria-hidden="true">
-              <span className="text-white font-luxury font-bold text-lg">C</span>
+            <div className="w-16 h-16 rounded-xl flex items-center justify-center shadow-luxury hover:shadow-glow transition-luxury overflow-hidden bg-ktv-darker" aria-hidden="true">
+              <img 
+                src="/logo.png" 
+                alt="Catwalk KTV Logo" 
+                className="w-full h-full object-contain"
+                loading="lazy"
+                onError={(e) => {
+                  // Try Google Drive sources
+                  if (!e.currentTarget.src.includes('drive.google.com')) {
+                    if (e.currentTarget.src !== 'https://drive.google.com/thumbnail?id=15R1tDygYVu40h8IvFyjrUCkrlqEJQALy&sz=w256') {
+                      e.currentTarget.src = 'https://drive.google.com/thumbnail?id=15R1tDygYVu40h8IvFyjrUCkrlqEJQALy&sz=w256';
+                    } else if (e.currentTarget.src !== 'https://drive.google.com/uc?export=view&id=15R1tDygYVu40h8IvFyjrUCkrlqEJQALy') {
+                      e.currentTarget.src = 'https://drive.google.com/uc?export=view&id=15R1tDygYVu40h8IvFyjrUCkrlqEJQALy';
+                    } else {
+                      // Final fallback to placeholder
+                      e.currentTarget.style.display = 'none';
+                      const fallback = e.currentTarget.nextSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
+                    }
+                  } else {
+                    // Final fallback to placeholder
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }
+                }}
+              />
+              <div className="w-full h-full bg-gradient-luxury rounded-xl flex items-center justify-center" style={{ display: 'none' }}>
+                <span className="text-white font-luxury font-bold text-lg">C</span>
+              </div>
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-luxury font-bold text-gradient-luxury">Catwalk KTV</span>

@@ -11,8 +11,36 @@ const Footer = () => {
           {/* Logo và giới thiệu */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-luxury rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">C</span>
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden bg-ktv-darker">
+                <img 
+                  src="/logo.png" 
+                  alt="Catwalk KTV Logo" 
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                  onError={(e) => {
+                    // Try Google Drive sources
+                    if (!e.currentTarget.src.includes('drive.google.com')) {
+                      if (e.currentTarget.src !== 'https://drive.google.com/thumbnail?id=15R1tDygYVu40h8IvFyjrUCkrlqEJQALy&sz=w256') {
+                        e.currentTarget.src = 'https://drive.google.com/thumbnail?id=15R1tDygYVu40h8IvFyjrUCkrlqEJQALy&sz=w256';
+                      } else if (e.currentTarget.src !== 'https://drive.google.com/uc?export=view&id=15R1tDygYVu40h8IvFyjrUCkrlqEJQALy') {
+                        e.currentTarget.src = 'https://drive.google.com/uc?export=view&id=15R1tDygYVu40h8IvFyjrUCkrlqEJQALy';
+                      } else {
+                        // Final fallback to placeholder
+                        e.currentTarget.style.display = 'none';
+                        const fallback = e.currentTarget.nextSibling as HTMLElement;
+                        if (fallback) fallback.style.display = 'flex';
+                      }
+                    } else {
+                      // Final fallback to placeholder
+                      e.currentTarget.style.display = 'none';
+                      const fallback = e.currentTarget.nextSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
+                    }
+                  }}
+                />
+                <div className="w-full h-full bg-gradient-luxury rounded-lg flex items-center justify-center" style={{ display: 'none' }}>
+                  <span className="text-white font-bold text-sm">C</span>
+                </div>
               </div>
               <span className="text-xl font-bold text-gradient-luxury">Catwalk KTV</span>
             </div>
@@ -64,8 +92,8 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-semibold text-foreground">Telegram</div>
-                <a href="https://t.me/@asianightlifesg" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-smooth" aria-label="Contact us on Telegram">
-                  @asianightlifesg
+                <a href="https://t.me/catwalkpremium" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-smooth" aria-label="Join our Telegram channel CATWALK premium">
+                  @catwalkpremium
                 </a>
               </div>
             </div>

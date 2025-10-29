@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Star, MapPin, Clock, Users, Music, Phone, DollarSign } from 'lucide-react';
 import { BlurFade } from '@/components/ui/blur-fade';
+import OperatingHours from '@/components/OperatingHours';
 
 const HomePage = () => {
   return (
@@ -144,68 +145,36 @@ const HomePage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Gallery Image 1 */}
             <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
               <img 
-                src="https://images.pexels.com/photos/6312354/pexels-photo-6312354.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Luxury KTV Room Interior with modern design and premium entertainment setup"
+                src="https://drive.google.com/thumbnail?id=1cD7EMQo44G8k_YuHC78aFiLOCv9YHaGC&sz=w1000" 
+                alt="Catwalk KTV Gallery - Premium Room Interior"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
                 decoding="async"
-                width={800}
-                height={320}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                srcSet="https://images.pexels.com/photos/6312354/pexels-photo-6312354.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
-                        https://images.pexels.com/photos/6312354/pexels-photo-6312354.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
                 onError={(e) => {
-                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Luxury+KTV+Room';
+                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Gallery+Image+1';
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
                 <div className="p-6 w-full">
-                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">VIP Room</h3>
+                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">Premium Room</h3>
                   <p className="text-gray-200 font-elegant">Luxurious private karaoke experience</p>
                 </div>
               </div>
             </div>
 
+            {/* Gallery Image 2 */}
             <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
               <img 
-                src="https://images.pexels.com/photos/760705/pexels-photo-760705.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="KTV Lounge Area with comfortable seating and elegant ambiance"
+                src="https://drive.google.com/thumbnail?id=1n6oWSdLQ34Y7-5DPbLyv2Ou1z_u1C_i2&sz=w1000" 
+                alt="Catwalk KTV Gallery - VIP Suite"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
                 decoding="async"
-                width={800}
-                height={320}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                srcSet="https://images.pexels.com/photos/760705/pexels-photo-760705.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
-                        https://images.pexels.com/photos/760705/pexels-photo-760705.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
                 onError={(e) => {
-                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Lounge+Area';
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
-                <div className="p-6 w-full">
-                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">Lounge Area</h3>
-                  <p className="text-gray-200 font-elegant">Relax in comfort and style</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
-              <img 
-                src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Premium VIP Suite with luxury decor and high-end amenities"
-                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-                decoding="async"
-                width={800}
-                height={320}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                srcSet="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400 400w,
-                        https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800 800w"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=VIP+Suite';
+                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Gallery+Image+2';
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
@@ -216,54 +185,131 @@ const HomePage = () => {
               </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift lg:col-span-2">
+            {/* Gallery Image 3 */}
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
               <img 
-                src="https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                alt="Catwalk KTV Exterior view at Textile Centre, Jalan Sultan"
+                src="https://drive.google.com/thumbnail?id=1oP7hIqooMHUySQdNu6wRdMUeOlLv74fe&sz=w1000" 
+                alt="Catwalk KTV Gallery - Lounge Area"
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
                 decoding="async"
-                width={1200}
-                height={320}
-                sizes="(max-width: 1024px) 100vw, 66vw"
-                srcSet="https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=600 600w,
-                        https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w"
                 onError={(e) => {
-                  e.currentTarget.src = 'https://via.placeholder.com/1200x400/1a1a2e/ffffff?text=Our+Venue';
+                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Gallery+Image+3';
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
                 <div className="p-6 w-full">
-                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">Our Venue</h3>
-                  <p className="text-gray-200 font-elegant">Located at Textile Centre, Jalan Sultan</p>
+                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">Lounge Area</h3>
+                  <p className="text-gray-200 font-elegant">Relax in comfort and style</p>
                 </div>
               </div>
             </div>
 
-                         <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
-               <div className="w-full h-80 relative overflow-hidden">
-                 <div 
-                   className="absolute inset-0 animate-gradient-xy"
-                   style={{
-                     background: 'linear-gradient(-45deg, hsl(var(--luxury-gold) / 0.3), hsl(var(--luxury-rose) / 0.3), hsl(var(--luxury-purple) / 0.3), hsl(var(--luxury-gold) / 0.3))',
-                     backgroundSize: '400% 400%'
-                   }}
-                 ></div>
-                 <div className="relative z-10 h-full flex items-center justify-center">
-                   <div className="text-center p-8">
-                     <Music className="w-24 h-24 mx-auto mb-6 text-gradient-luxury" />
-                     <h3 className="text-2xl font-luxury font-bold mb-4">Book Now</h3>
-                     <p className="text-muted-foreground font-elegant mb-6">Experience the difference</p>
-                     <a href="tel:+6582808072">
-                       <Button variant="luxury" className="gap-2">
-                         <Phone className="w-4 h-4" />
-                         +65 8280 8072
-                       </Button>
-                     </a>
-                   </div>
-                 </div>
-               </div>
-             </div>
+            {/* Gallery Image 4 */}
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
+              <img 
+                src="https://drive.google.com/thumbnail?id=1IA6b0qOp4HfQwWK2gpaFYsN_FP2zBGHk&sz=w1000" 
+                alt="Catwalk KTV Gallery - Entertainment Room"
+                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Gallery+Image+4';
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                <div className="p-6 w-full">
+                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">Entertainment Room</h3>
+                  <p className="text-gray-200 font-elegant">State-of-the-art karaoke system</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Gallery Image 5 */}
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
+              <img 
+                src="https://drive.google.com/thumbnail?id=1aK-XIJAFzkGof3Pu2ZX0bOCD90w97X75&sz=w1000" 
+                alt="Catwalk KTV Gallery - Private Room"
+                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Gallery+Image+5';
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                <div className="p-6 w-full">
+                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">Private Room</h3>
+                  <p className="text-gray-200 font-elegant">Exclusive group entertainment</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Gallery Image 6 */}
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
+              <img 
+                src="https://drive.google.com/thumbnail?id=1mdVzwbC-hxO-3x3sfR-8zE8sKhPc7gbW&sz=w1000" 
+                alt="Catwalk KTV Gallery - VIP Experience"
+                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Gallery+Image+6';
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                <div className="p-6 w-full">
+                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">VIP Experience</h3>
+                  <p className="text-gray-200 font-elegant">Premium service and amenities</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Gallery Image 7 - Wide Layout */}
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift lg:col-span-2">
+              <img 
+                src="https://drive.google.com/thumbnail?id=19-pNrgUmJeWk6d-sNCyaVLosIEs4l_QK&sz=w2000" 
+                alt="Catwalk KTV Gallery - Main Hall"
+                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://via.placeholder.com/1200x400/1a1a2e/ffffff?text=Main+Hall';
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                <div className="p-6 w-full">
+                  <h3 className="text-white font-luxury text-2xl font-bold mb-2">Main Hall</h3>
+                  <p className="text-gray-200 font-elegant">Singapore's largest KTV complex</p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Card */}
+            <div className="relative group overflow-hidden rounded-2xl shadow-luxury hover-lift">
+              <div className="w-full h-80 relative overflow-hidden">
+                <div 
+                  className="absolute inset-0 animate-gradient-xy"
+                  style={{
+                    background: 'linear-gradient(-45deg, hsl(var(--luxury-gold) / 0.3), hsl(var(--luxury-rose) / 0.3), hsl(var(--luxury-purple) / 0.3), hsl(var(--luxury-gold) / 0.3))',
+                    backgroundSize: '400% 400%'
+                  }}
+                ></div>
+                <div className="relative z-10 h-full flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <Music className="w-24 h-24 mx-auto mb-6 text-gradient-luxury" />
+                    <h3 className="text-2xl font-luxury font-bold mb-4">Book Now</h3>
+                    <p className="text-muted-foreground font-elegant mb-6">Experience the difference</p>
+                    <a href="tel:+6582808072">
+                      <Button variant="luxury" className="gap-2">
+                        <Phone className="w-4 h-4" />
+                        +65 8280 8072
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -280,77 +326,65 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="glass-effect border-gradient hover-lift">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury flex-shrink-0">
-                    <Clock className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-luxury font-bold">Operating Hours</h3>
-                </div>
-                <div className="space-y-3 text-muted-foreground">
-                  <div className="flex justify-between items-center">
-                    <span className="font-elegant">Daily:</span>
-                    <span className="font-semibold text-gradient-luxury">4PM - 3AM</span>
-                  </div>
-                  <div className="border-t border-border/50 pt-3 mt-3">
-                    <p className="text-sm font-elegant">Happy Hour: 3:30PM - 7PM</p>
-                    <p className="text-sm font-elegant">Normal Hours: 7PM - 3AM</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <OperatingHours />
 
-            <Card className="glass-effect border-gradient hover-lift">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury flex-shrink-0">
-                    <Users className="w-8 h-8 text-white" />
+            <Card className="glass-effect border-gradient hover-lift h-full">
+              <CardContent className="p-8 h-full flex flex-col">
+                {/* Hostesses Section */}
+                <div className="mb-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury flex-shrink-0">
+                      <Users className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-luxury font-bold">Hostesses</h3>
                   </div>
-                  <h3 className="text-2xl font-luxury font-bold">Hostesses</h3>
+                  <div className="space-y-3 text-muted-foreground">
+                    <div className="flex justify-between items-center">
+                      <span className="font-elegant">Number:</span>
+                      <span className="font-semibold text-gradient-luxury">30 - 35</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="font-elegant">Age:</span>
+                      <span className="font-semibold">20 - 26</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="font-elegant">Nationality:</span>
+                      <span className="font-semibold">Vietnamese</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="font-elegant">Languages:</span>
+                      <span className="font-semibold text-sm">Vietnamese, English, Chinese</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="space-y-3 text-muted-foreground">
-                  <div className="flex justify-between items-center">
-                    <span className="font-elegant">Number:</span>
-                    <span className="font-semibold text-gradient-luxury">30 - 35</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-elegant">Age:</span>
-                    <span className="font-semibold">20 - 26</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-elegant">Nationality:</span>
-                    <span className="font-semibold">Vietnamese</span>
-                  </div>
-                  <div className="border-t border-border/50 pt-3 mt-3">
-                    <p className="text-sm font-elegant">Languages: Vietnamese, English, Chinese</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
 
-            <Card className="glass-effect border-gradient hover-lift">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury flex-shrink-0">
-                    <DollarSign className="w-8 h-8 text-white" />
+                {/* Divider */}
+                <div className="border-t border-border/50 my-6"></div>
+
+                {/* Pricing Section */}
+                <div className="flex-grow">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center shadow-luxury flex-shrink-0">
+                      <DollarSign className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-luxury font-bold">Pricing</h3>
                   </div>
-                  <h3 className="text-2xl font-luxury font-bold">Pricing</h3>
-                </div>
-                <div className="space-y-3 text-muted-foreground">
-                  <div className="flex justify-between items-center">
-                    <span className="font-elegant">Hostess Tip (HH):</span>
-                    <span className="font-semibold text-gradient-luxury">S$70</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-elegant">Hostess Tip (NH):</span>
-                    <span className="font-semibold text-gradient-luxury">S$100</span>
-                  </div>
-                  <div className="border-t border-border/50 pt-3 mt-3">
-                    <p className="text-sm font-elegant">Small Room: 1 Tower</p>
-                    <p className="text-sm font-elegant">Medium Room: 2 Towers/1 Bottle</p>
-                    <p className="text-sm font-elegant">Large Room: 4 Towers/2 Bottles</p>
+                  <div className="space-y-3 text-muted-foreground">
+                    <div className="flex justify-between items-center">
+                      <span className="font-elegant">Hostess Tip (HH):</span>
+                      <span className="font-semibold text-gradient-luxury">S$70</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="font-elegant">Hostess Tip (NH):</span>
+                      <span className="font-semibold text-gradient-luxury">S$100</span>
+                    </div>
+                    <div className="border-t border-border/50 pt-3 mt-3">
+                      <p className="text-sm font-elegant mb-2">Room Requirements:</p>
+                      <p className="text-sm font-elegant">Small Room: 1 Tower</p>
+                      <p className="text-sm font-elegant">Medium Room: 2 Towers/1 Bottle</p>
+                      <p className="text-sm font-elegant">Large Room: 4 Towers/2 Bottles</p>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -386,6 +420,7 @@ const HomePage = () => {
                       <p className="text-muted-foreground font-elegant">
                         200 Jalan Sultan<br />
                         Textile Centre Level 7<br />
+                        (use Lift 7 or 8)<br />
                         Singapore 199018
                       </p>
                     </div>
@@ -400,19 +435,6 @@ const HomePage = () => {
                       <p className="text-muted-foreground font-elegant">
                         Phone: <span className="text-gradient-luxury font-semibold">+65 8280 8072</span><br />
                         WhatsApp: <span className="text-gradient-luxury font-semibold">+65 8280 8072</span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-luxury flex items-center justify-center flex-shrink-0 shadow-luxury">
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2 text-lg">Hours</h4>
-                      <p className="text-muted-foreground font-elegant">
-                        Monday - Sunday<br />
-                        <span className="text-gradient-luxury font-semibold">4:00 PM - 3:00 AM</span>
                       </p>
                     </div>
                   </div>
@@ -503,7 +525,7 @@ const HomePage = () => {
       <div className="fixed right-2 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
         {/* WhatsApp */}
         <a 
-          href="https://wa.me/6582808072"
+          href="https://wa.me/6582808072?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
           target="_blank"
           rel="noopener noreferrer"
           className="group relative touch-target-large"
@@ -518,11 +540,11 @@ const HomePage = () => {
 
         {/* Telegram */}
         <a 
-          href="https://t.me/+6582808072"
+          href="https://t.me/catwalkpremium"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative touch-target-large"
-          aria-label="Contact us on Telegram"
+          aria-label="Join our Telegram channel CATWALK premium"
         >
           <div className="w-12 h-12 rounded-full bg-[#0088cc] flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="transition-transform group-hover:scale-110" aria-hidden="true">

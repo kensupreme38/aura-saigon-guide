@@ -1,0 +1,32 @@
+===============================================
+HƯỚNG DẪN THÊM LOGO VÀO DỰ ÁN
+===============================================
+
+Để logo hiển thị trên website, vui lòng làm theo các bước sau:
+
+1. Download logo từ Google Drive:
+   https://drive.google.com/file/d/15R1tDygYVu40h8IvFyjrUCkrlqEJQALy/view?usp=drive_link
+
+2. Đổi tên file thành: logo.png
+   (hoặc logo.jpg / logo.svg tùy theo định dạng)
+
+3. Đặt file vào thư mục: public/logo.png
+   
+   Cấu trúc thư mục sẽ như sau:
+   public/
+   ├── logo.png          <- Đặt logo ở đây
+   ├── favicon.ico
+   └── ...
+
+4. Refresh lại website và logo sẽ tự động hiển thị!
+
+===============================================
+
+CHÚ Ý:
+- File logo phải có tên chính xác là "logo.png" (hoặc .jpg, .svg)
+- Nếu muốn dùng định dạng khác, chỉnh sửa đường dẫn trong:
+  - src/components/Navbar.tsx (dòng 19)
+  - src/components/Footer.tsx (dòng 16)
+
+===============================================
+
