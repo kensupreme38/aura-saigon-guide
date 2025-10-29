@@ -352,9 +352,12 @@ const HomePage = () => {
                       <span className="font-elegant">Nationality:</span>
                       <span className="font-semibold">Vietnamese</span>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-start sm:items-center">
                       <span className="font-elegant">Languages:</span>
-                      <span className="font-semibold text-sm">Vietnamese, English, Chinese</span>
+                      <span className="font-semibold text-sm text-right max-w-[60%]">
+                        <span className="hidden sm:inline">Vietnamese, English, Chinese</span>
+                        <span className="inline sm:hidden">Vietnamese<br/>English<br/>Chinese</span>
+                      </span>
                     </div>
                   </div>
                 </div>
