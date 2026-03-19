@@ -53,7 +53,7 @@ const Navbar = () => {
 
           {/* Navigation - Both Desktop and Mobile */}
           <div className="flex items-center space-x-8">
-            <a href="tel:+6582808072" aria-label="Call us at +65 8280 8072" className="min-touch-target inline-flex">
+            <a href="https://wa.me/6582668669?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing." target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp at +65 8266 8669" className="min-touch-target inline-flex">
               <Button variant="luxury" size="default" className="gap-2 h-11">
                 <Phone className="w-5 h-5" aria-hidden="true" />
                 Book Now

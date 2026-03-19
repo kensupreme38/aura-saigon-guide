@@ -65,7 +65,7 @@ const HomePage = () => {
           
           <BlurFade delay={0.8} direction="up">
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="tel:+6582808072">
+              <a href="https://wa.me/6582668669?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing." target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="luxury" className="gap-3 text-xl px-10 py-4 animate-pulse-luxury hover:scale-105 transition-transform">
                   <Phone className="w-5 h-5" />
                   Book Now
@@ -300,10 +300,10 @@ const HomePage = () => {
                     <Music className="w-24 h-24 mx-auto mb-6 text-gradient-luxury" />
                     <h3 className="text-2xl font-luxury font-bold mb-4">Book Now</h3>
                     <p className="text-muted-foreground font-elegant mb-6">Experience the difference</p>
-                    <a href="tel:+6582808072">
+                    <a href="https://wa.me/6582668669?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing." target="_blank" rel="noopener noreferrer">
                       <Button variant="luxury" className="gap-2">
                         <Phone className="w-4 h-4" />
-                        +65 8280 8072
+                        +65 8266 8669
                       </Button>
                     </a>
                   </div>
@@ -436,15 +436,15 @@ const HomePage = () => {
                     <div>
                       <h4 className="font-semibold mb-2 text-lg">Contact</h4>
                       <p className="text-muted-foreground font-elegant">
-                        Phone: <span className="text-gradient-luxury font-semibold">+65 8280 8072</span><br />
-                        WhatsApp: <span className="text-gradient-luxury font-semibold">+65 8280 8072</span>
+                        Phone: <span className="text-gradient-luxury font-semibold">+65 8266 8669</span><br />
+                        WhatsApp: <span className="text-gradient-luxury font-semibold">+65 8266 8669</span>
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-border/50">
-                  <a href="tel:+6582808072">
+                  <a href="https://wa.me/6582668669?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing." target="_blank" rel="noopener noreferrer">
                     <Button size="lg" variant="luxury" className="w-full gap-3 text-lg shadow-luxury">
                       <Phone className="w-5 h-5" />
                       Book Your Room Now
@@ -496,7 +496,7 @@ const HomePage = () => {
           </BlurFade>
           <BlurFade delay={0.6} direction="up">
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="tel:+6582808072">
+              <a href="https://wa.me/6582668669?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing." target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="luxury" className="gap-3 text-xl px-10 py-4 shadow-luxury">
                   <Phone className="w-5 h-5" />
                   Call to Book
@@ -509,9 +509,11 @@ const HomePage = () => {
 
       {/* Floating Call Button */}
       <a 
-        href="tel:+6582808072"
+        href="https://wa.me/6582668669?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
+        target="_blank"
+        rel="noopener noreferrer"
         className="fixed bottom-2 left-2 z-50 group"
-        aria-label="Call us at +65 8280 8072"
+        aria-label="Contact us on WhatsApp at +65 8266 8669"
       >
         <div className="relative">
           {/* Ripple effect layers */}
@@ -528,11 +530,11 @@ const HomePage = () => {
       <div className="fixed right-2 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
         {/* WhatsApp */}
         <a 
-          href="https://wa.me/6582808072?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
+          href="https://wa.me/6582668669?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
           target="_blank"
           rel="noopener noreferrer"
           className="group relative touch-target-large"
-          aria-label="Contact us on WhatsApp at +65 8280 8072"
+          aria-label="Contact us on WhatsApp at +65 8266 8669"
         >
           <div className="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="transition-transform group-hover:scale-110" aria-hidden="true">

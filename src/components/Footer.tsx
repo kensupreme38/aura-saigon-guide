@@ -77,8 +77,8 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-semibold text-foreground">WhatsApp</div>
-                <a href="https://wa.me/6582808072" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-smooth" aria-label="Contact us on WhatsApp at +65 8280 8072">
-                  +65 8280 8072
+                <a href="https://wa.me/6582668669?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing." target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-smooth" aria-label="Contact us on WhatsApp at +65 8266 8669">
+                  +65 8266 8669
                 </a>
               </div>
             </div>

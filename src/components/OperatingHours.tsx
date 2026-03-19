@@ -189,7 +189,7 @@ const OperatingHours: React.FC = () => {
             <Clock className="w-4 h-4 inline mr-2" />
             Current time (SGT): {currentTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
           </p>
-          <a href="https://wa.me/6582808072" target="_blank" rel="noopener noreferrer" className="block">
+          <a href="https://wa.me/6582668669?text=Hello!%20I%20would%20like%20to%20book%20a%20room%20at%20CATWALK%20KTV.%20Please%20let%20me%20know%20about%20availability%20and%20pricing." target="_blank" rel="noopener noreferrer" className="block">
             <Button variant="luxury" className="w-full gap-2 shadow-luxury">
               <Phone className="w-4 h-4" />
               Book Your Room
